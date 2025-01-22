@@ -1,37 +1,68 @@
-html {
-    font-family: sans-serif;
-}
-body {
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+body > * {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+    scrollbar-width: thin;
+    scrollbar-color: #EEE #FFF;
 }
 
-#input, #result {
-    grid-column: 1;
-    height: 100%;
-    margin: .5rem;
+#inp, #out {
+    width: 50%;
+    padding: .5rem;
+}
+
+#inp {
+    left: 0;
+    font-family: monospace;
+}
+
+#out {
+    right: 0;
+    font-family: sans-serif;
 }
 
 #sep {
-    position: absolute;
-    top: 0;
     left: 50%;
-    height: 100%;
-    width: .1em;
-    background-color: black;
+    width: .09rem;
+    background-color: #EEE;
 }
 
-.first::before {
-    content: "Write something";
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    color: gray;
+:focus {
+    outline: none;
 }
 
-#result {
-    grid-column: 2;
-    height: 100%;
-    overflow-y: scroll;
+@media screen and (max-width: 600px) {
+    body > * {
+        width: 100% !important;
+    }
+
+    #inp, #out {
+        height: 50%;
+    }
+
+    #out, #sep {
+        top: 50%;
+        left: 0;
+    }
+
+    #sep {
+        height: .09rem;
+        background-color: #EEE;
+    }
+}
+
+@media print {
+    #inp, #sep {
+        display: none;
+    }
+    #out {
+        position: static;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }

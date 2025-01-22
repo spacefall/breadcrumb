@@ -6,9 +6,9 @@
 </head>
 
 <body>
-<div id="input" class="first" onclick="first()" oninput="first()" autofocus contenteditable="plaintext-only"></div>
+<div id="inp" oninput="edit()" onscroll="sync(0)" autofocus contenteditable="plaintext-only"></div>
 <div id="sep"></div>
-<div id="result"></div>
+<div id="out" onscroll="sync(1)"></div>
 <script src="main.js"></script>
 <script src="minmd.js"></script>
 </body>

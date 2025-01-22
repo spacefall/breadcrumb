@@ -1,11 +1,8 @@
-const editdiv = document.querySelector('#input');
-const res = document.querySelector('#result');
+const div = [inp, out];
 function edit() {
-    let r = editdiv.innerText;
-    console.log(r);
-    res.innerHTML = i(r);
+    div[1].innerHTML = i(div[0].innerText);
 }
-function first() {
-    editdiv.oninput = edit;
-    editdiv.onclick = editdiv.classList = "";
+
+function sync(elem) {
+    div[+!elem].scrollTop = div[elem].scrollTop;
 }
