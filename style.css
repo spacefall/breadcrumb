@@ -1,3 +1,7 @@
+body {
+    background: #F3EAD3;
+}
+
 body > * {
     box-sizing: border-box;
     position: absolute;
@@ -7,7 +11,8 @@ body > * {
     word-wrap: break-word;
     word-break: break-word;
     scrollbar-width: thin;
-    scrollbar-color: #EEE #FFF;
+    scrollbar-color: #8DA101 #E5DFC5;
+    color: #5C6A72;
 }
 
 #inp, #out {
@@ -28,11 +33,37 @@ body > * {
 #sep {
     left: 50%;
     width: .09rem;
-    background-color: #EEE;
+    background: #E5DFC5;
+}
+
+hr {
+    border-collapse: collapse;
+    border-color: #E5DFC5;
+    border-style: solid;
 }
 
 :focus {
     outline: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #333C43;
+    }
+
+    body > * {
+        scrollbar-color: #A7C080 #293136;
+        color: #D3C6AA;
+    }
+
+    #sep {
+        background: #434F55;
+    }
+
+    hr {
+        border-color: #434F55;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
