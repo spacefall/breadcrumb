@@ -1,7 +1,7 @@
 d = async i => {
-    A = Uint8Array.from(atob(i),x=>x.charCodeAt(0))
+    A = Uint8Array.from(atob(i), x => x.charCodeAt(0))
     B = new Blob([A]).stream().pipeThrough(new DecompressionStream('gzip'))
-    R = []
+    let R = []
     for await (M of B) {
         R.push(M);
     }
