@@ -20,3 +20,7 @@ document.addEventListener("keydown",e=>{
         URL.revokeObjectURL(m.href)
     }
 });
+
+i.oninput=c;
+i.onscroll=()=>s(0);
+o.onscroll=()=>s(1);
