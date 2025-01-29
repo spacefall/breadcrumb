@@ -1,5 +1,5 @@
 String.prototype.r=String.prototype.replace
-i = l => l
+p = l => l
 	// tabs to spaces
 	.r(/\t/g, "    ")
 	.r("\n", " ")

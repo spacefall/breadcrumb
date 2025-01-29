@@ -1,13 +1,12 @@
-const div = [inp, out]
-let timeout
+i = inp
+o = out
+a = [i,o]
+b = 0
+c = () => o.innerHTML = p(i.innerText)
 
-const edit = () => {
-    out.innerHTML = parse(inp.innerText)
-}
-
-const sync = elem => {
-    div[+!elem].onscroll = ""
-    clearTimeout(timeout)
-    timeout = setTimeout(() =>  div[+!elem].onscroll = () => sync(+!elem), 10)
-    div[+!elem].scrollTop = (div[elem].scrollTop/(div[elem].scrollHeight-div[elem].offsetHeight))*(div[+!elem].scrollHeight-div[+!elem].offsetHeight)
+s = e => {
+    a[+!e].onscroll = ""
+    clearTimeout(b)
+    b = setTimeout(() =>  a[+!e].onscroll = () => sync(+!e), 10)
+    a[+!e].scrollTop = (a[e].scrollTop/(a[e].scrollHeight-a[e].offsetHeight))*(a[+!e].scrollHeight-a[+!e].offsetHeight)
 }
